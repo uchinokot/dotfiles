@@ -124,7 +124,7 @@ function _update_vcs_info_msg() {
 }
 
 add-zsh-hook precmd _update_vcs_info_msg
-PROMPT='%F{2}%%%f '
+PROMPT="[%n@%m]%F{2}%%%f "
 RPROMPT="["
 RPROMPT+="$BLUE%~%f$DEFAULT"
 RPROMPT+="%1(v|%F{green}%1v%f|)"
