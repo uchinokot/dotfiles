@@ -85,6 +85,7 @@ bindkey -v '^?' backward-delete-char
 bindkey '^[[Z' reverse-menu-complete
 bindkey '^@' anyframe-widget-cd-ghq-repository
 bindkey '^r' anyframe-widget-put-history
+bindkey '^ ' autosuggest-accept
 
 #
 # Aliases
