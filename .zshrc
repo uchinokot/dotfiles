@@ -100,36 +100,33 @@ alias git see='git browse'
 
 # Completion
 
-zstyle ":vcs_info:*" enable git svn hg bzr
-zstyle ":vcs_info:*" formats "(%s)-[%b]"
-zstyle ":vcs_info:*" actionformats "(%s)-[%b|%a]"
-zstyle ":vcs_info:(svn|bzr):*" branchformat "%b:r%r"
-zstyle ":vcs_info:bzr:*" use-simple true
-zstyle ":vcs_info:*" max-exports 6
-if is-at-least 4.3.10; then
-  zstyle ":vcs_info:git:*" check-for-changes true # commitしていないのをチェック
-  zstyle ":vcs_info:git:*" stagedstr "<S>"
-  zstyle ":vcs_info:git:*" unstagedstr "<U>"
-  zstyle ":vcs_info:git:*" formats "(%b) %c%u"
-  zstyle ":vcs_info:git:*" actionformats "(%s)-[%b|%a] %c%u"
-fi
+zstyle ':completion:*' completer _complete _match _approximate
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+zstyle ':completion:*' use-cache true
+zstyle ':completion:*' verbose yes
+zstyle ':completion:*:default' menu select=2
+zstyle ':completion:*:descriptions' format '%F{yellow}-- %d --%f'
+zstyle ':completion:*:options' description 'yes'
 
 #
 # Prompt
 #
 
-function _update_vcs_info_msg() {
-  psvar=()
-  LANG=en_US.UTF-8 vcs_info
-  [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
+POWERLINE_SEPARATOR=$'\ue0b2'
+POWERLINE_BRANCH=$'\ue0a0'
+
+zstyle ':vcs_info:*' formats '%F{7}%K{8} '$POWERLINE_BRANCH' %b %k%f'
+
+function precmd_vcs_info() {
+  vcs_info
 }
 
-add-zsh-hook precmd _update_vcs_info_msg
-PROMPT="[%n@%m]%F{2}%%%f "
-RPROMPT="["
-RPROMPT+="$BLUE%~%f$DEFAULT"
-RPROMPT+="%1(v|%F{green}%1v%f|)"
-RPROMPT+="]"
+add-zsh-hook precmd precmd_vcs_info
+
+PROMPT='%F{2}%%%f '
+RPROMPT='%F{8}%K{0}'$POWERLINE_SEPARATOR'%k%f${vcs_info_msg_0_}%F{2}%K{8}'$POWERLINE_SEPARATOR'%k%f%F{0}%K{2} %c %k%f'
 
 #
 # Other settings
