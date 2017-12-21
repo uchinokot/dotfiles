@@ -132,8 +132,6 @@ RPROMPT='%F{8}%K{0}'$POWERLINE_SEPARATOR'%k%f${vcs_info_msg_0_}%F{2}%K{8}'$POWER
 # Other settings
 #
 
-export DOTFILES="$HOME/.dotfiles"
-
 # rbenv
 
 export PATH="$HOME/.rbenv/bin:$PATH"
