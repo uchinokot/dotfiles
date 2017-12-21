@@ -75,7 +75,6 @@ export HISTFILE=~/.zhistory
 export HISTSIZE=1000
 export SAVEHIST=1000000
 export LANG=ja_JP.UTF-8
-export DOTFILES="$HOME/.dotfiles"
 
 #
 # Key bindings
@@ -106,7 +105,7 @@ zstyle ':completion:*' group-name ''
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 zstyle ':completion:*' use-cache true
-zstyle ':completion:*' verbose yes
+
 zstyle ':completion:*:default' menu select=2
 zstyle ':completion:*:descriptions' format '%F{yellow}-- %d --%f'
 zstyle ':completion:*:options' description 'yes'
@@ -133,11 +132,23 @@ RPROMPT='%F{8}%K{0}'$POWERLINE_SEPARATOR'%k%f${vcs_info_msg_0_}%F{2}%K{8}'$POWER
 # Other settings
 #
 
+export DOTFILES="$HOME/.dotfiles"
+
 # rbenv
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 
 eval "$(rbenv init - zsh)"
+
+# pyenv
+
+export PATH="$HOME/.pyenv/bin:$PATH"
+export PYENV_ROOT=/usr/local/opt/pyenv
+eval "$(pyenv init -)"
+
+# SQLite
+
+export PATH="/usr/local/opt/sqlite/bin:$PATH"
 
 # hub
 
