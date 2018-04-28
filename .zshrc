@@ -93,6 +93,9 @@ bindkey '^ ' autosuggest-accept
 
 alias vi='vim'
 alias git see='git browse'
+alias g='cd $(ghq list -p | peco)'
+alias gh='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
+alias be='bundle exec'
 
 #
 # Module settings
@@ -135,7 +138,6 @@ RPROMPT='%F{8}%K{0}'$POWERLINE_SEPARATOR'%k%f${vcs_info_msg_0_}%F{2}%K{8}'$POWER
 # rbenv
 
 export PATH="$HOME/.rbenv/bin:$PATH"
-
 eval "$(rbenv init - zsh)"
 
 # pyenv
@@ -144,6 +146,11 @@ export PATH="$HOME/.pyenv/bin:$PATH"
 export PYENV_ROOT=/usr/local/opt/pyenv
 eval "$(pyenv init -)"
 
+# ndenv
+
+export PATH="$HOME/.ndenv/bin:$PATH"
+eval "$(ndenv init -)"
+
 # SQLite
 
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
@@ -151,3 +158,16 @@ export PATH="/usr/local/opt/sqlite/bin:$PATH"
 # hub
 
 function git(){hub "$@"}
+
+# go
+
+export GOPATH=$HOME
+export PATH=$PATH:$GOPATH/bin
+
+# yarn
+
+export PATH="$PATH:`yarn global bin`"
+
+# tmuxinator
+
+source ~/.tmuxinator/tmuxinator.zsh

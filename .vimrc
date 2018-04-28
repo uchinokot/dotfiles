@@ -1,3 +1,8 @@
+call plug#begin('~/.vim/plugged')
+Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/nerdtree'
+call plug#end()
+
 syntax on
 set number
 set ai
