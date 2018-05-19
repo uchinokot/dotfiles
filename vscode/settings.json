@@ -1,0 +1,28 @@
+{
+  "workbench.startupEditor": "none",
+  "workbench.iconTheme": "file-icons",
+  "workbench.colorTheme": "One Dark Pro",
+  "editor.rulers": [160],
+  "editor.renderIndentGuides": true,
+  "editor.fontSize": 12,
+  "editor.tabSize": 2,
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "boundary",
+  "files.insertFinalNewline": true,
+  "explorer.confirmDragAndDrop": false,
+  "extensions.ignoreRecommendations": true,
+  "window.zoomLevel": 0,
+  "files.autoSave": "off",
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j","j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.leader": "<space>",
+}

@@ -1,10 +1,14 @@
 #!/bin/bash
 
-DOTFILES=(.tmux.conf .vimrc .zshrc)
+DOTFILES=(.tmux.conf .vimrc .zshrc vscode)
 
 for file in ${DOTFILES[@]}
 do
-  ln -fnsv $HOME/dotfiles/$file $HOME/$file
+  if [ $file == 'vscode' ]; then
+    ln -fnsv $HOME/dotfiles/vscode/setting.json $HOME/Library/Application\ Support/Code/User
+  else
+    ln -fnsv $HOME/dotfiles/$file $HOME/$file
+  fi
 done
 
 if [ ! -d ~/.tmux/plugins/tpm ]; then
