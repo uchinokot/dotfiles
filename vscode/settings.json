@@ -18,11 +18,21 @@
   "vim.useSystemClipboard": true,
   "vim.useCtrlKeys": true,
   "vim.hlsearch": true,
+  "vim.leader": "<space>",
   "vim.insertModeKeyBindings": [
     {
       "before": ["j","j"],
-      "after": ["<Esc>"]
+      "after": ["<Esc>"],
     }
   ],
-  "vim.leader": "<space>",
+  "vim.otherModesKeyBindingsNonRecursive": [
+    {
+      "before": ["leader","h"],
+      "after" : [ "^" ],
+    },
+    {
+      "before": ["leader","l"],
+      "after" : [ "$" ]
+    }
+  ]
 }
