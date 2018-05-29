@@ -14,9 +14,11 @@
   "window.zoomLevel": 0,
   "files.autoSave": "off",
   "vim.easymotion": true,
+  "vim.sneak": true,
   "vim.incsearch": true,
-  "vim.useSystemClipboard": true,
+  "vim.overrideCopy": true,
   "vim.useCtrlKeys": true,
+  "vim.useSystemClipboard": true,
   "vim.hlsearch": true,
   "vim.leader": "<space>",
   "vim.insertModeKeyBindings": [
@@ -34,5 +36,6 @@
       "before": ["leader","l"],
       "after" : [ "$" ]
     }
-  ]
+  ],
+  "explorer.confirmDelete": false
 }
