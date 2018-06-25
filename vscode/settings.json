@@ -27,7 +27,7 @@
       "after": ["<Esc>"],
     }
   ],
-  "vim.otherModesKeyBindingsNonRecursive": [
+  "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": ["leader","h"],
       "after" : [ "^" ],
