@@ -16,6 +16,10 @@ if ! zplug check --verbose; then
   fi
 fi
 
+if [ -e ~/.zsh/completions ]; then
+  fpath=(~/.zsh/completions $fpath)
+fi
+
 zplug load --verbose
 
 #
