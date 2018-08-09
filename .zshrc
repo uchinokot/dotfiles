@@ -20,7 +20,7 @@ if [ -e ~/.zsh/completions ]; then
   fpath=(~/.zsh/completions $fpath)
 fi
 
-zplug load --verbose
+zplug load
 
 #
 # Autoloadings
