@@ -1,6 +1,8 @@
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
+Plug 'Shougo/unite.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()
 
 syntax on
