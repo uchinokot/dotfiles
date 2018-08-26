@@ -18,6 +18,12 @@ if dein#load_state('~/.cache/dein')
  call dein#add('Yggdroot/indentLine')
  call dein#add('vim-airline/vim-airline')
  call dein#add('itchyny/lightline.vim')
+ call dein#add('bronson/vim-trailing-whitespace')
+ call dein#add('Shougo/denite.nvim')
+ call dein#add('rking/ag.vim')
+" call dein#add('ctrlpvim/ctrlp.vim')
+" call dein#add('tacahiroy/ctrlp-funky')
+" call dein#add('suy/vim-ctrlp-commandline')
 
  if dein#check_install()
    call dein#install()
@@ -116,3 +122,30 @@ if (empty($TMUX))
     set termguicolors
   endif
 endif
+
+" ag.vim
+
+" denite
+
+" grep
+call denite#custom#option('default', 'prompt', '>')
+" " denite/insert モードのときは，C- で移動できるようにする
+call denite#custom#map('insert', "<C-j>", '<denite:move_to_next_line>')
+call denite#custom#map('insert', "<C-k>", '<denite:move_to_previous_line>')
+
+" tabopen や vsplit のキーバインドを割り当て
+call denite#custom#map('insert', "<C-t>", '<denite:do_action:tabopen>')
+call denite#custom#map('insert', "<C-v>", '<denite:do_action:vsplit>')
+call denite#custom#map('normal', "v", '<denite:do_action:vsplit>')
+
+" jj で denite/insert を抜けるようにする
+call denite#custom#map('insert', 'jj', '<denite:enter_mode:normal>')
+nnoremap <silent> / :<C-u>Denite -buffer-name=search -auto-resize line<CR>
+
+" 普通にgrep
+nnoremap <silent> <C-p> :<C-u>Denite file_rec<CR><Paste>
+" カーソル以下の単語をgrep
+nnoremap <silent> ;cg :<C-u>DeniteCursorWord grep -buffer-name=search line<CR><C-R><C-W><CR>
+" 普通にgrep
+nnoremap <silent> ;g :<C-u>Denite -buffer-name=search -mode=normal grep<CR>
+" hi CursorLine guifg=#E19972
