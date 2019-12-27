@@ -90,6 +90,10 @@ bindkey '^[[Z' reverse-menu-complete
 bindkey '^@' anyframe-widget-cd-ghq-repository
 bindkey '^r' anyframe-widget-put-history
 bindkey '^ ' autosuggest-accept
+bindkey '^A' beginning-of-line
+bindkey '^B' backward-char
+bindkey '^E' end-of-line
+bindkey '^F' forward-char
 
 #
 # Aliases
@@ -100,6 +104,7 @@ alias git see='git browse'
 alias g='cd $(ghq list -p | peco)'
 alias gh='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
 alias be='bundle exec'
+alias ll='ls -al'
 
 #
 # Module settings
@@ -175,3 +180,5 @@ export PATH="$PATH:`yarn global bin`"
 # tmuxinator
 
 source ~/.tmuxinator/tmuxinator.zsh
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
