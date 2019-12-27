@@ -1,7 +1,6 @@
 {
   "workbench.startupEditor": "none",
-  "workbench.iconTheme": "file-icons",
-  "workbench.colorTheme": "One Dark Pro",
+  "workbench.colorTheme": "Atomize",
   "editor.rulers": [160],
   "editor.renderIndentGuides": true,
   "editor.fontSize": 12,
@@ -12,7 +11,6 @@
   "explorer.confirmDragAndDrop": false,
   "extensions.ignoreRecommendations": true,
   "window.zoomLevel": 0,
-  "files.autoSave": "off",
   "vim.easymotion": true,
   "vim.sneak": true,
   "vim.incsearch": true,
@@ -23,20 +21,55 @@
   "vim.leader": "<space>",
   "vim.insertModeKeyBindings": [
     {
-      "before": ["j","j"],
-      "after": ["<Esc>"],
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": ["leader","h"],
-      "after" : [ "^" ],
+      "before": ["leader", "h"],
+      "after": ["^"]
     },
     {
-      "before": ["leader","l"],
-      "after" : [ "$" ]
+      "before": ["leader", "l"],
+      "after": ["$"]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["leader", "h"],
+      "after": ["^"]
+    },
+    {
+      "before": ["leader", "l"],
+      "after": ["$"]
     }
   ],
   "explorer.confirmDelete": false,
-  "typescript.updateImportsOnFileMove.enabled": "never"
+  "typescript.updateImportsOnFileMove.enabled": "never",
+  "editor.wordWrapColumn": 100,
+  "breadcrumbs.enabled": true,
+  "editor.find.autoFindInSelection": true,
+  "files.associations": {
+    "*.tpl": "php",
+    "*.tsx": "typescriptreact"
+  },
+  "extensions.autoUpdate": false,
+  "editor.tabCompletion": "on",
+  "ruby.rubocop.onSave": false,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "prettier.singleQuote": true,
+  "files.trimTrailingWhitespace": true,
+  "files.trimFinalNewlines": true,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
