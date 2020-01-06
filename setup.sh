@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DOTFILES=(.tmux.conf .vimrc .zshrc vscode nvim)
+DOTFILES=(.tmux.conf .vimrc .zshrc vscode nvim .editorconfig)
 
 for file in ${DOTFILES[@]}
 do
