@@ -67,6 +67,11 @@ let g:airline#extensions#tabline#show_close_button = 0
 let g:airline#extensions#tabline#show_splits = 0
 let g:airline#extensions#tabline#show_tab_type = 0
 
+" nerdtree
+
+let NERDTreeShowHidden = 1
+
+nmap <Leader>n :NERDTreeToggle<CR>
 
 " indentLine
 let g:indentLine_color_term='DarkGray'
