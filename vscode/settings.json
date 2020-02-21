@@ -33,7 +33,15 @@
     {
       "before": ["leader", "l"],
       "after": ["$"]
-    }
+    },
+    {
+      "before": ["leader", "w"],
+      "commands": [":w"]
+    },
+    {
+      "before": ["leader", "q"],
+      "commands": [":q"]
+    },
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
@@ -43,7 +51,7 @@
     {
       "before": ["leader", "l"],
       "after": ["$"]
-    }
+    },
   ],
   "explorer.confirmDelete": false,
   "typescript.updateImportsOnFileMove.enabled": "never",
@@ -68,8 +76,8 @@
   },
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "workbench.editor.enablePreviewFromQuickOpen": false,
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "ActiveFileInStatusBar.fullpath": false
 }
