@@ -89,7 +89,7 @@ bindkey -v '^?' backward-delete-char
 bindkey '^[[Z' reverse-menu-complete
 bindkey '^@' anyframe-widget-cd-ghq-repository
 bindkey '^r' anyframe-widget-put-history
-bindkey '^f' autosuggest-accept
+bindkey '^ ' autosuggest-accept
 bindkey '^A' beginning-of-line
 bindkey '^B' backward-char
 bindkey '^E' end-of-line
