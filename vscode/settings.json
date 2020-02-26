@@ -19,6 +19,15 @@
   "vim.useSystemClipboard": true,
   "vim.hlsearch": true,
   "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-f>": true,
+    "<C-b>": true,
+    "<C-u>": true,
+    "<C-r>": true,
+    "<C-v>": true,
+    "<C-[>": true,
+    "<C-w>": true,
+  },
   "vim.insertModeKeyBindings": [
     {
       "before": ["j", "j"],
