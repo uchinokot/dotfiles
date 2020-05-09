@@ -1,9 +1,9 @@
 {
   "workbench.startupEditor": "none",
-  "workbench.colorTheme": "Atomize",
+  "workbench.colorTheme": "Iceberg",
   "editor.rulers": [160],
   "editor.renderIndentGuides": true,
-  "editor.fontSize": 12,
+  "editor.fontSize": 16,
   "editor.tabSize": 2,
   "editor.minimap.enabled": false,
   "editor.renderWhitespace": "boundary",
@@ -51,6 +51,10 @@
       "before": ["leader", "q"],
       "commands": [":q"]
     },
+    {
+      "before": ["leader", "["],
+      "after": ["%"]
+    },
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
@@ -88,5 +92,9 @@
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "ActiveFileInStatusBar.fullpath": false
+  "ActiveFileInStatusBar.fullpath": false,
+  "workbench.editor.showTabs": true,
+  "liveshare.featureSet": "stable",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.fontFamily": "Ricty Diminished"
 }
