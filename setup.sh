@@ -2,6 +2,10 @@
 
 DOTFILES=(.tmux.conf .vimrc .zshrc vscode nvim .editorconfig)
 
+if [ ! `which brew` ]; then
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
 for file in ${DOTFILES[@]}
 do
   if [ $file == 'vscode' ]; then
