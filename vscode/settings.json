@@ -1,16 +1,16 @@
 {
   "workbench.startupEditor": "none",
-  "workbench.colorTheme": "Iceberg",
+  "workbench.colorTheme": "Atomize",
   "editor.rulers": [160],
   "editor.renderIndentGuides": true,
-  "editor.fontSize": 16,
+  "editor.fontSize": 14,
   "editor.tabSize": 2,
   "editor.minimap.enabled": false,
   "editor.renderWhitespace": "boundary",
   "files.insertFinalNewline": true,
   "explorer.confirmDragAndDrop": false,
   "extensions.ignoreRecommendations": true,
-  "window.zoomLevel": 0,
+  "window.zoomLevel": 1,
   "vim.easymotion": true,
   "vim.sneak": true,
   "vim.incsearch": true,
@@ -96,5 +96,5 @@
   "workbench.editor.showTabs": true,
   "liveshare.featureSet": "stable",
   "workbench.iconTheme": "material-icon-theme",
-  "editor.fontFamily": "Ricty Diminished"
+  "editor.fontFamily": "Menlo",
 }
