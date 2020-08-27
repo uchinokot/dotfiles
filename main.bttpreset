@@ -1,0 +1,26 @@
+{
+  "BTTPresetName" : "20200827",
+  "BTTPresetColor" : "47.817600, 79.994860, 149.430000, 255.000000",
+  "BTTPresetUUID" : "EDCECD9F-D71D-48F7-88E0-A7C6E502A883",
+  "BTTPresetContent" : [
+    {
+      "BTTAppBundleIdentifier" : "BT.G",
+      "BTTAppName" : "Global",
+      "BTTAppAutoInvertIcon" : 1,
+      "BTTTriggers" : [
+
+      ]
+    },
+    {
+      "BTTAppBundleIdentifier" : "com.apple.finder",
+      "BTTAppName" : "Finder",
+      "BTTAppAutoInvertIcon" : 1,
+      "BTTTriggers" : [
+
+      ]
+    }
+  ],
+  "BTTPresetSnapAreas" : [
+
+  ]
+}
