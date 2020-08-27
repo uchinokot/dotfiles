@@ -1,21 +1,12 @@
 #!/bin/bash
 
-DOTFILES=(.tmux.conf .vimrc .zshrc vscode nvim .editorconfig)
-
 if [ ! `which brew` ]; then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-for file in ${DOTFILES[@]}
-do
-  if [ $file == 'vscode' ]; then
-    ln -fnsv $HOME/dotfiles/vscode/setting.json $HOME/Library/Application\ Support/Code/User
-  elif [ $file == 'nvim' ]; then
-    ln -fnsv $HOME/dotfiles/nvim/init.vim $HOME/.config/nvim/init.vim
-  else
-    ln -fnsv $HOME/dotfiles/$file $HOME/$file
-  fi
-done
+brew bundle
+
+env RCRC=$HOME/src/github.com/uchinokot/dotfiles/rcrc rcup
 
 if [ ! -d ~/.tmux/plugins/tpm ]; then
   git clone git@github.com:tmux-plugins/tpm.git ~/.tmux/plugins/tpm

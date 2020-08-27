@@ -1,5 +1,6 @@
 
 tap "heroku/brew"
+tap "thoughtbot/formulae"
 
 brew "chromedriver"
 brew "ghq"
@@ -15,6 +16,7 @@ brew "ndenv"
 brew "openssl"
 brew "peco"
 brew "postgresql"
+brew "rcm"
 brew "readline"
 brew "rbenv"
 brew "ruby-build"

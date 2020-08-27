@@ -176,9 +176,3 @@ export PATH=$PATH:$GOPATH/bin
 # yarn
 
 export PATH="$PATH:`yarn global bin`"
-
-# tmuxinator
-
-source ~/.tmuxinator/tmuxinator.zsh
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
