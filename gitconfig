@@ -1,0 +1,20 @@
+[user]
+		name = Kota Uchino
+		email = uchinokota@gmail.com
+[alias]
+		ad = add
+		br = branch
+		ci = commit
+		co = checkout
+		ft = fetch
+		pl = pull
+		ps = push
+		sh = show
+		st = status
+		see = browse
+[ghq]
+		root = ~/src
+[core]
+		editor = vim
+[include]
+		path = ~/.gitconfig.local
