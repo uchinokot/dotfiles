@@ -149,12 +149,6 @@ RPROMPT='%F{8}%K{0}'$POWERLINE_SEPARATOR'%k%f${vcs_info_msg_0_}%F{2}%K{8}'$POWER
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init - zsh)"
 
-# pyenv
-
-export PATH="$HOME/.pyenv/bin:$PATH"
-export PYENV_ROOT=/usr/local/opt/pyenv
-eval "$(pyenv init -)"
-
 # ndenv
 
 export PATH="$HOME/.ndenv/bin:$PATH"
