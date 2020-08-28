@@ -16,5 +16,6 @@
 		root = ~/src
 [core]
 		editor = vim
+		excludesFile = ~/.gitignore_global
 [include]
 		path = ~/.gitconfig.local
