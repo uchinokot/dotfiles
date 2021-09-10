@@ -170,3 +170,8 @@ export PATH=$PATH:$GOPATH/bin
 # yarn
 
 export PATH="$PATH:`yarn global bin`"
+source $(brew --prefix nvm)/nvm.sh
+
+# flutter
+
+export PATH="$PATH:$HOME/src/flutter/bin"
