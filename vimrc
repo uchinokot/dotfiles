@@ -1,11 +1,4 @@
-call plug#begin('~/.vim/plugged')
-Plug 'tpope/vim-fugitive'
-Plug 'scrooloose/nerdtree'
-Plug 'Shougo/unite.vim'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'Yggdroot/indentLine'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+call plug#begin()
 call plug#end()
 
 syntax on
@@ -55,26 +48,3 @@ inoremap jj <ESC>
 "
 " Plugin settings
 "
-
-" vim-airline
-
-let g:airline_theme = 'solarized'
-let g:airline_solarized_bg='dark'
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#show_buffers = 0
-let g:airline#extensions#tabline#show_close_button = 0
-let g:airline#extensions#tabline#show_splits = 0
-let g:airline#extensions#tabline#show_tab_type = 0
-
-" nerdtree
-
-let NERDTreeShowHidden = 1
-
-nmap <Leader>n :NERDTreeToggle<CR>
-
-" indentLine
-let g:indentLine_color_term='DarkGray'
-let g:indentLine_faster = 1
-"let g:indentLine_leadingSpaceEnabled=1
-"let g:indentLine_leadingSpaceChar='·'
