@@ -4,7 +4,6 @@ call plug#end()
 syntax on
 set number
 set ai
-command E Ex
 set list
 set listchars=tab:>-,trail:.
 set tabstop=2
