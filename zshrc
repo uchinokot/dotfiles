@@ -149,10 +149,10 @@ RPROMPT='%F{8}%K{0}'$POWERLINE_SEPARATOR'%k%f${vcs_info_msg_0_}%F{2}%K{8}'$POWER
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init - zsh)"
 
-# ndenv
+# volta
 
-export PATH="$HOME/.ndenv/bin:$PATH"
-eval "$(ndenv init -)"
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
 
 # SQLite
 
@@ -166,11 +166,6 @@ function git(){hub "$@"}
 
 export GOPATH=$HOME
 export PATH=$PATH:$GOPATH/bin
-
-# yarn
-
-export PATH="$PATH:`yarn global bin`"
-source $(brew --prefix nvm)/nvm.sh
 
 # flutter
 
