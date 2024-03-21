@@ -42,6 +42,7 @@ noremap <Leader>h ^
 noremap <Leader>l $
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
+nnoremap <Leader>wq :wq<CR>
 inoremap jj <ESC>
 
 "
