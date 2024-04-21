@@ -1,2 +1,2 @@
-EXCLUDES="README.md setup.sh Brewfile"
+EXCLUDES="README.md setup.sh Brewfile keyboards"
 DOTFILES_DIRS="$HOME/src/github.com/uchinokot/dotfiles"
