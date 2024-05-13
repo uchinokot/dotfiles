@@ -22,11 +22,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [1] = LAYOUT_split_3x6_3_ex2(
   //,--------------------------------------------------------------.  ,--------------------------------------------------------------.
-       KC_ESC, KC_EXLM,   KC_AT,  KC_EQL,  KC_GRV, KC_PERC, KC_LPRN,    KC_RPRN, KC_CIRC, KC_UNDS, KC_TILD, XXXXXXX, KC_PLUS, KC_BSPC,
+       KC_ESC, KC_EXLM,   KC_AT,  KC_EQL,  KC_GRV, KC_TILD, KC_LPRN,    KC_RPRN, XXXXXXX, KC_UNDS, XXXXXXX, XXXXXXX, KC_PLUS, KC_BSPC,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-      KC_LCTL, KC_ASTR, KC_SCLN,  KC_DLR, XXXXXXX, XXXXXXX, KC_LBRC,    KC_RBRC, KC_HASH, KC_LPRN, KC_RPRN, XXXXXXX, KC_SCLN, KC_QUOT,
+      KC_LCTL,   KC_AT, KC_ASTR,  KC_DLR, XXXXXXX, XXXXXXX, KC_LBRC,    KC_RBRC, KC_HASH, KC_LPRN, KC_RPRN, XXXXXXX, KC_SCLN, KC_QUOT,
   //|--------+--------+--------+--------+--------+--------+--------'  `--------+--------+--------+--------+--------+--------+--------|
-      KC_LSFT, KC_LALT, XXXXXXX, KC_COLN, KC_PIPE, KC_BSLS,                      KC_AMPR, KC_LBRC, KC_RBRC, KC_DOT,  KC_SLSH, KC_RSFT,
+      KC_LSFT, KC_LALT, XXXXXXX, KC_CIRC, KC_PIPE, KC_BSLS,                      KC_AMPR, KC_LBRC, KC_RBRC, KC_DOT,  XXXXXXX, KC_RSFT,
   //|--------+--------+--------+--------+--------+--------+--------.  ,--------+--------+--------+--------+--------+--------+--------|
                                           KC_LGUI,   MO(3),  KC_SPC,     KC_ENT, XXXXXXX, KC_RALT
                                       //`--------------------------'  `--------------------------'
@@ -34,7 +34,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [2] = LAYOUT_split_3x6_3_ex2(
   //,--------------------------------------------------------------.  ,--------------------------------------------------------------.
-       KC_ESC, KC_EXLM,   KC_AT, KC_HASH,  KC_DLR, KC_PERC, XXXXXXX,    XXXXXXX, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_BSPC,
+       KC_ESC, KC_EXLM,   KC_AT, KC_HASH,  KC_DLR, KC_PERC, XXXXXXX,    XXXXXXX, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_PERC, KC_BSPC,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
       KC_LCTL, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,MY_MACRO,    XXXXXXX, KC_LEFT, KC_DOWN,  KC_UP, KC_RIGHT, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------'  `--------+--------+--------+--------+--------+--------+--------|
