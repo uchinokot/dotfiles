@@ -8,6 +8,7 @@ zplug 'zsh-users/zsh-autosuggestions'
 zplug 'zsh-users/zsh-completions'
 zplug 'zsh-users/zsh-syntax-highlighting'
 zplug 'mollifier/anyframe'
+zplug 'paulirish/git-open', as:plugin
 
 if ! zplug check --verbose; then
   printf 'Install? [y/N]: '
