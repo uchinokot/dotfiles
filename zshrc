@@ -4,6 +4,8 @@
 
 source ~/.zplug/init.zsh
 
+eval "$(starship init zsh)"
+
 zplug 'zsh-users/zsh-autosuggestions'
 zplug 'zsh-users/zsh-completions'
 zplug 'zsh-users/zsh-syntax-highlighting'
@@ -122,24 +124,6 @@ zstyle ':completion:*' use-cache true
 zstyle ':completion:*:default' menu select=2
 zstyle ':completion:*:descriptions' format '%F{yellow}-- %d --%f'
 zstyle ':completion:*:options' description 'yes'
-
-#
-# Prompt
-#
-
-POWERLINE_SEPARATOR=$'\ue0b2'
-POWERLINE_BRANCH=$'\ue0a0'
-
-zstyle ':vcs_info:*' formats '%F{7}%K{8} '$POWERLINE_BRANCH' %b %k%f'
-
-function precmd_vcs_info() {
-  vcs_info
-}
-
-add-zsh-hook precmd precmd_vcs_info
-
-PROMPT='%F{2}%%%f '
-RPROMPT='%F{8}%K{0}'$POWERLINE_SEPARATOR'%k%f${vcs_info_msg_0_}%F{2}%K{8}'$POWERLINE_SEPARATOR'%k%f%F{0}%K{2} %c %k%f'
 
 #
 # Other settings
