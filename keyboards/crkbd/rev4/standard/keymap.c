@@ -4,8 +4,8 @@
 #include QMK_KEYBOARD_H
 
 enum custom_keycodes {
-  MY_MACRO = SAFE_RANGE
-  KC_CUSTOM_COLON = SAFE_RANGE,
+  MY_MACRO = SAFE_RANGE,
+  KC_CUSTOM_COLON
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -85,10 +85,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record)
             return false;
         case KC_CUSTOM_COLON:
             if (record->event.pressed) {
-                register_code(KC_LSHIFT);
+                register_code(KC_LSFT);
                 register_code(KC_SCLN);
                 unregister_code(KC_SCLN);
-                unregister_code(KC_LSHIFT);
+                unregister_code(KC_LSFT);
             }
             return false;  // 他のキーコードは続行しない
         default:
