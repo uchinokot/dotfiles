@@ -152,3 +152,8 @@ export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 
 # mise
 eval "$(~/.local/bin/mise activate zsh)"
+
+function search_org() {
+  local org="${GITHUB_ORG:-your-organization}"
+  rg "$1" "$(ghq root)/github.com/$org"
+}
