@@ -129,16 +129,6 @@ zstyle ':completion:*:options' description 'yes'
 # Other settings
 #
 
-# rbenv
-
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init - zsh)"
-
-# volta
-
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
-
 # SQLite
 
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
@@ -155,3 +145,10 @@ export PATH=$PATH:$GOPATH/bin
 # flutter
 
 export PATH="$PATH:$HOME/src/flutter/bin"
+
+# libpq
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+
+
+# mise
+eval "$(~/.local/bin/mise activate zsh)"
